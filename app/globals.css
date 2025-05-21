@@ -37,7 +37,42 @@ body {
 	}
 }
 
+
 .float {
   transform: translatey(0px);
 	animation: float 3s ease-in-out infinite;
+}
+
+@keyframes throb {
+  0%, 100% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  50% {
+    transform: scale(1.02);
+    filter: brightness(1.01); /* slight brightening */
+  }
+}
+
+.throb {
+  animation: throb 4s ease-in-out infinite;
+  transform-origin: center;
+  backface-visibility: hidden;
+  will-change: transform;
+  image-rendering: auto; /* or 'crisp-edges' if it's pixel-based */
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 45s linear infinite;
 }

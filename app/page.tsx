@@ -12,6 +12,7 @@ declare global {
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Head from "next/head";
+import Marquee from "./components/Marquee";
 
 export default function Home() {
 
@@ -88,9 +89,16 @@ export default function Home() {
           <a onClick={handleClick} className="cursor-pointer inline-block text-black text-[20px] font-normal hover:font-bold hover:tracking-[2px] transition-all duration-600">ˢᵗᵉᵖ ⁱⁿᵗᵒ ᵗʰᵉ ₑₜₕₑᵣ ...</a>
         </div>
         <main className="relative h-screen" id="main">
-          <section className="w-full flex justify-center h-full flex justify-center items-center flex-col">
-          <Image src="/images/ether-logo-texturized.png" alt="Profile" width={250}  height={70}  />
-          <p className="text-white">ᵘⁿᵈᵉʳ ᶜᵒⁿˢᵗʳᵘᶜᵗⁱᵒⁿ...</p>
+          <section className="w-full flex justify-center h-full">
+            <div className="container flex justify-center items-center flex-col">
+              <Image src="/images/ether-logo-texturized.png" className="throb" alt="Profile" width={250}  height={70}  />
+              <p className="text-white throb">ᵘⁿᵈᵉʳ ᶜᵒⁿˢᵗʳᵘᶜᵗⁱᵒⁿ...</p>
+              <div className="max-w-[350px] w-full flex justify-center items-center flex-col mt-4">
+                <Marquee />
+                {/* <h3 className="text-[20px] font-bold tracking-[-1px]">PAST EVENTS</h3> */}
+                <a className="hover:tracking-[1px] transition-all duration-600 text-[12px]" href="https://ra.co/events/2139503">001: Sister Zo, Honeydrip, MIASALAV, Asha, Runa</a>
+              </div>
+            </div>
           </section>
           {modalOpen && (
           <div className="fixed inset-0 flex bg-black/75 justify-center items-center z-50">
