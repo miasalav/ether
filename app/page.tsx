@@ -86,7 +86,7 @@ export default function Home() {
         hideIntro ? "opacity-0" : "opacity-100"
       }`}>
           <Image src="/images/ether-flowers.jpg" className="float" alt="Profile" width={200}  height={70} sizes="100vw" />
-          <a onClick={handleClick} className="cursor-pointer inline-block text-black text-[20px] font-normal hover:font-bold hover:tracking-[2px] transition-all duration-600">ˢᵗᵉᵖ ⁱⁿᵗᵒ ᵗʰᵉ ₑₜₕₑᵣ ...</a>
+          <a onClick={handleClick} className="animate-pulse cursor-pointer inline-block text-black text-[20px] font-normal hover:font-bold hover:tracking-[2px] transition-all duration-600">ˢᵗᵉᵖ ⁱⁿᵗᵒ ᵗʰᵉ ₑₜₕₑᵣ ...</a>
         </div>
         <main className="relative h-screen" id="main">
           <section className="w-full flex justify-center h-full">
