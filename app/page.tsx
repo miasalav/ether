@@ -88,8 +88,9 @@ export default function Home() {
           <a onClick={handleClick} className="cursor-pointer inline-block text-black text-[20px] font-normal hover:font-bold hover:tracking-[2px] transition-all duration-600">ˢᵗᵉᵖ ⁱⁿᵗᵒ ᵗʰᵉ ₑₜₕₑᵣ ...</a>
         </div>
         <main className="relative h-screen" id="main">
-          <section className="w-full flex justify-center h-full flex justify-center items-center">
-          <Image src="/images/ether-logo-texturized.png" alt="Profile" width={300}  height={70} sizes="100vw" />
+          <section className="w-full flex justify-center h-full flex justify-center items-center flex-col">
+          <Image src="/images/ether-logo-texturized.png" alt="Profile" width={250}  height={70}  />
+          <p className="text-white">ᵘⁿᵈᵉʳ ᶜᵒⁿˢᵗʳᵘᶜᵗⁱᵒⁿ...</p>
           </section>
           {modalOpen && (
           <div className="fixed inset-0 flex bg-black/75 justify-center items-center z-50">
